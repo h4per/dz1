@@ -5,10 +5,10 @@
 {% endblock %}
 
 {% block content %}
-
+    
     {% for course in courses %}
     <br>
-    <div class="card mx-auto" style="width: 35rem;">
+    <div class="card" style="width: 25rem;">
         <img src="{{ courses.cover.url }}" class="card-img-top" alt="...">
         <div class="card-body">
             <h5 class="card-title">{{ courses.title }}</h5>

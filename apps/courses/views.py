@@ -7,6 +7,11 @@ from django.urls import reverse_lazy
 
 class CoursesView(generic.ListView):
     queryset = Courses.objects.all()
-    template_name = "courses/index.html"
+    template_name = "courses/course.html"
     context_object_name = "courses"
 
+
+class BenefitsView(generic.ListView):
+    queryset = Courses.objects.all()
+    template_name = "courses/benefits.html"
+    context_object_name = "courses"

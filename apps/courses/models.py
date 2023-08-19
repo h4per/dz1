@@ -10,7 +10,8 @@ class Courses(models.Model):
     )
     image = models.ImageField(
         upload_to='courses/',
-        verbose_name='Фото'
+        verbose_name='Фото',
+        blank=True
     )
     status = models.BooleanField(
         default=True,

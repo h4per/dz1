@@ -7,12 +7,11 @@
 {% block content %}
     {% for benefit in benefits %}
     <br>
-    <div class="card mx-3" style="width: 25rem;">
-        <img src="{{ benefit.cover.url }}" class="card-img-top" alt="...">
+    <div class="mx-5 my-4" style="width: 25rem;">
+        <img src="{{ benefit.image.url }}" class="card-img-top" alt="...">
         <div class="card-body">
             <h5 class="card-title">{{ benefit.title }}</h5>
-            <h6 class="card-subtitle mb-2 text-body-secondary"></h6>
-            <p class="card-text">{{ benefit.content }}</p>
+            <h6 class="card-subtitle mb-2 text-body-secondary">{{ benefit.description }}</h6>
         </div>
     </div>
     <br>

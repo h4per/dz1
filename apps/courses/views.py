@@ -20,4 +20,4 @@ class CoursesView(generic.ListView):
 class BenefitsView(generic.ListView):
     queryset = Courses.objects.all()
     template_name = "courses/benefits.html"
-    context_object_name = "courses"
+    context_object_name = "benefits"

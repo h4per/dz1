@@ -35,7 +35,7 @@ class Benefits(models.Model):
         verbose_name='Описание'
     )
     image = models.ImageField(
-        upload_to='courses/',
+        upload_to='benefits/',
         verbose_name='Фото',
         blank=True
     )

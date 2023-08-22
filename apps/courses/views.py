@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse, HttpRequest
-from apps.courses.models import Courses
+from apps.courses.models import Courses, Benefits
 from django.views import generic
 from django.urls import reverse_lazy
 
@@ -18,6 +18,6 @@ class CoursesView(generic.ListView):
 
 
 class BenefitsView(generic.ListView):
-    queryset = Courses.objects.all()
+    queryset = Benefits.objects.all()
     template_name = "courses/benefits.html"
     context_object_name = "benefits"

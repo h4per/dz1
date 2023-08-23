@@ -15,6 +15,7 @@
                 <h5 class="card-title">{{ course.title }}</h5>
                 <h6 class="card-subtitle mb-2 text-body-secondary">{{ course.description }}</h6>
                 <h6 class="card-subtitle mb-2 text-body-secondary">{{ course.course_start }}</h6>
+                <a href="{% url 'courses-detail' course.id %}" class="btn btn-outline-secondary">Подробнее</a>
             </div>
         </div>
         <br>

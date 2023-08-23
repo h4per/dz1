@@ -15,6 +15,12 @@ class CoursesView(generic.ListView):
     context_object_name = "courses"
 
 
+class CourseDetailView(generic.DetailView):
+    model = Courses
+    template_name = "courses/courses_detail.html"
+    context_object_name = "courses"    
+
+
 class BenefitsView(generic.ListView):
     queryset = Benefits.objects.all()
     template_name = "courses/benefits.html"

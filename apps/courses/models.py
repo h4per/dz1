@@ -5,6 +5,11 @@ class Courses(models.Model):
         max_length= 255,
         verbose_name='Заголовок'
     )
+    course_start = models.TimeField(
+        max_length= 255,
+        verbose_name='Старт курса',
+        auto_now=True
+    )
     description = models.TextField(
         verbose_name='Описание'
     )

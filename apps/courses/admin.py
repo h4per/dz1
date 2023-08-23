@@ -5,18 +5,15 @@ from apps.courses.models import Courses, Benefits, About
 class CoursesAdmin(admin.ModelAdmin):
     list_display = ['title', 'description', 'image', 'status']
     list_filter = ['status']
-    list_editable = ['status']
 
 
 @admin.register(Benefits)
 class BenefitsAdmin(admin.ModelAdmin):
     list_display = ['title', 'description', 'status']
     list_filter = ['status']
-    list_editable = ['status']
 
 
 @admin.register(About)
 class AboutAdmin(admin.ModelAdmin):
     list_display = ['description', 'status', 'image']
     list_filter = ['status']
-    list_editable = ['status']

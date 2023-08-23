@@ -5,11 +5,12 @@
 {% endblock %}
 
 {% block content %}
-<div class="container text-center">
+<h1 class="display-1 text-center "><strong>ИСТОРИЯ СОЗДАНИЯ</strong></h1>
+<div class="container text-center mt-4">
     <div class="row">
         {% for about in abouts %}
-        <div class="col-6 col-sm-4">{{ about.description }}</div>
-        <div class="col-6 col-sm-4">{{ about.image }}</div>
+        <div class="col-6 col-sm-4 h5">{{ about.description }}</div>
+        <div class="col-6"><img src="{{ about.image.url }} "class="card-img-top"></div>
         {% endfor %}
     </div>
 </div>

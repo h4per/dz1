@@ -70,3 +70,23 @@ class About(models.Model):
 class Meta:
     verbose_name = 'О нас'
     verbose_name_plural = 'О них'
+
+
+class Faq(models.Model):
+    question = models.CharField(
+        max_length= 255,
+        verbose_name='Вопрос'
+    )
+    answer = models.TextField(
+        verbose_name='Ответ'
+    )
+    status = models.BooleanField(
+        default=True,
+        verbose_name="Статус публикации"
+    )
+    def __str__(self):
+        return f"{self.question} - {self.answer}"
+
+class Meta:
+    verbose_name = 'FAQ'
+    verbose_name_plural = 'FAQS'

@@ -1,4 +1,4 @@
-from apps.courses.models import Courses, Benefits, About
+from apps.courses.models import Courses, Benefits, About, Faq
 from django.views import generic
 
 
@@ -20,7 +20,14 @@ class BenefitsView(generic.ListView):
     template_name = "courses/benefits.html"
     context_object_name = "benefits"
 
+
 class AboutView(generic.ListView):
     queryset = About.objects.all()
     template_name = "courses/about.html"
     context_object_name = "abouts"
+
+
+class FaqView(generic.ListView):
+    queryset = Faq.objects.all()
+    template_name = "courses/faq.html"
+    context_object_name = "faqs"

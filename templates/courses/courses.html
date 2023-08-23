@@ -6,16 +6,18 @@
 
 {% block content %}
 <br>
-<div class="container overflow-hidden">
-    <div class="row gx-5">
+<div class="container overflow-hidden ">
+    <div class="row gy-4">
         {% for course in courses %}
-        <div class="card mx-4" style="width: 25rem;">
+        <div class="col-4">
+            <div class="card" style="width: 25rem;">
             <img src="{{ course.image.url }}" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">{{ course.title }}</h5>
-                <h6 class="card-subtitle mb-2 text-body-secondary">{{ course.description }}</h6>
-                <h6 class="card-subtitle mb-2 text-body-secondary">{{ course.course_start }}</h6>
-                <a href="{% url 'courses-detail' course.id %}" class="btn btn-outline-secondary">Подробнее</a>
+                <div class="card-body">
+                    <h5 class="card-title">{{ course.title }}</h5>
+                    <h6 class="card-subtitle mb-2 text-body-secondary">{{ course.description }}</h6>
+                    <h6 class="card-subtitle mb-2 text-body-secondary">{{ course.course_start }}</h6>
+                    <a href="{% url 'courses-detail' course.id %}" class="btn btn-outline-secondary">Подробнее</a>
+                </div>
             </div>
         </div>
         <br>

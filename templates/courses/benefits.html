@@ -9,13 +9,13 @@
 <h1 class=".bg-body-tertiary text-center">Почему стоит учиться в Geeks?</h1>
 <div class="container overflow-hidden">
     <br>
-    <div class="row gx-5">
+    <div class="row">
         {% for benefit in benefits %}
-        <div class="card mx-4" style="width: 25rem;">
+        <div class="card mx-auto" style="width: 25rem;">
             <div class="card-body">
-                <h2 class="card-title">{{ benefit.title }}</h2>
+                <h4 class="card-title">{{ benefit.title }}</h4>
                 <br>
-                <h3 class="card-subtitle mb-2 text-body-secondary">{{ benefit.description }}</h3>
+                <h4 class="card-subtitle mb-2 text-body-secondary">{{ benefit.description }}</h4>
             </div>
         </div>
         <br>

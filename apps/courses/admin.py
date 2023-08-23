@@ -10,6 +10,6 @@ class CoursesAdmin(admin.ModelAdmin):
 
 @admin.register(Benefits)
 class BenefitsAdmin(admin.ModelAdmin):
-    list_display = ['title', 'description', 'image', 'status']
+    list_display = ['title', 'description', 'status']
     list_filter = ['status']
     list_editable = ['status']

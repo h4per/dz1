@@ -5,10 +5,9 @@ class Courses(models.Model):
         max_length= 255,
         verbose_name='Заголовок'
     )
-    course_start = models.TimeField(
+    course_start = models.CharField(
         max_length= 255,
-        verbose_name='Старт курса',
-        auto_now=True
+        verbose_name='Старт курса'
     )
     description = models.TextField(
         verbose_name='Описание'
@@ -38,11 +37,6 @@ class Benefits(models.Model):
     )
     description = models.TextField(
         verbose_name='Описание'
-    )
-    image = models.ImageField(
-        upload_to='benefits/',
-        verbose_name='Фото',
-        blank=True
     )
     status = models.BooleanField(
         default=True,

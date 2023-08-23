@@ -1,6 +1,7 @@
-from apps.courses.models import Courses, Benefits, About, Faq
+from apps.courses.models import Courses, Benefits, About, Faq, Enroll
 from django.views import generic
-
+from django.urls import reverse_lazy
+from apps.courses.forms import EnrollForm
 
 
 class MainMenuView(generic.ListView):
@@ -19,6 +20,13 @@ class CourseDetailView(generic.DetailView):
     model = Courses
     template_name = "courses/courses_detail.html"
     context_object_name = "courses"    
+
+
+class EnrollCreateView(generic.CreateView):
+    model = Enroll
+    template_name = "courses/enroll.html"
+    form_class = EnrollForm
+    success_url = reverse_lazy("courses")
 
 
 class BenefitsView(generic.ListView):

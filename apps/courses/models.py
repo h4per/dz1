@@ -90,3 +90,36 @@ class Faq(models.Model):
 class Meta:
     verbose_name = 'FAQ'
     verbose_name_plural = 'FAQS'
+
+
+class Enroll(models.Model):
+    name = models.CharField(
+        max_length= 255,
+        verbose_name='Имя'
+    )
+    surname = models.CharField(
+        max_length= 255,
+        verbose_name='Фамилия'
+    )
+    course = models.CharField(
+        max_length= 255,
+        verbose_name='Курс'
+    )
+    email = models.CharField(
+        max_length= 255,
+        verbose_name='Почта'
+    )
+    phone_number = models.CharField(
+        max_length= 255,
+        verbose_name='Номер телефона'
+    )
+    status = models.BooleanField(
+        default=True,
+        verbose_name="Статус публикации"
+    )
+    def __str__(self):
+        return f"{self.name} - {self.course}"
+
+class Meta:
+    verbose_name = 'Enroll'
+    verbose_name_plural = 'Enrolls'

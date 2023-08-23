@@ -1,5 +1,5 @@
 from django.contrib import admin
-from apps.courses.models import Courses, Benefits, About, Faq
+from apps.courses.models import Courses, Benefits, About, Faq, Enroll
 
 @admin.register(Courses)
 class CoursesAdmin(admin.ModelAdmin):
@@ -22,4 +22,10 @@ class AboutAdmin(admin.ModelAdmin):
 @admin.register(Faq)
 class FaqAdmin(admin.ModelAdmin):
     list_display = ['question', 'status', 'answer']
+    list_filter = ['status']
+
+
+@admin.register(Enroll)
+class EnrollAdmin(admin.ModelAdmin):
+    list_display =  ["name", "surname", "course", "email", "phone_number"]
     list_filter = ['status']

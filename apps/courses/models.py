@@ -49,3 +49,24 @@ class Benefits(models.Model):
 class Meta:
     verbose_name = 'Преимущество'
     verbose_name_plural = 'Преимущества'
+
+
+class About(models.Model):
+    description = models.TextField(
+        verbose_name='Описание'
+    )
+    status = models.BooleanField(
+        default=True,
+        verbose_name="Статус публикации"
+    )
+    image = models.ImageField(
+        upload_to='about/',
+        verbose_name='Фото',
+        blank=True
+    )
+    def __str__(self):
+        return f"{self.description} - {self.status}"
+
+class Meta:
+    verbose_name = 'О нас'
+    verbose_name_plural = 'О них'

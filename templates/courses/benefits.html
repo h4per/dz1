@@ -5,14 +5,21 @@
 {% endblock %}
 
 {% block content %}
-    {% for benefit in benefits %}
+<br>    
+<h1 class=".bg-body-tertiary text-center">Почему стоит учиться в Geeks?</h1>
+<div class="container overflow-hidden">
     <br>
-    <div class="mx-5 my-4" style="width: 25rem;">
-        <div class="card-body">
-            <h5 class="card-title">{{ benefit.title }}</h5>
-            <h6 class="card-subtitle mb-2 text-body-secondary">{{ benefit.description }}</h6>
+    <div class="row gx-5">
+        {% for benefit in benefits %}
+        <div class="card mx-4" style="width: 25rem;">
+            <div class="card-body">
+                <h2 class="card-title">{{ benefit.title }}</h2>
+                <br>
+                <h3 class="card-subtitle mb-2 text-body-secondary">{{ benefit.description }}</h3>
+            </div>
         </div>
-    </div>
-    <br>
-    {% endfor %}
+        <br>
+        {% endfor %}
+  </div>
+</div>
 {% endblock %}
